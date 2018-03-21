@@ -17,6 +17,7 @@ import { Switch, Route } from 'react-router-dom';
 import HomePage from 'containers/HomePage/Loadable';
 import NotFoundPage from 'containers/NotFoundPage/Loadable';
 import Header from 'components/Header';
+import GenderShow from 'components/GenderShow';
 import Welcome from 'containers/Welcome/index';
 
 export default function App() {
@@ -24,6 +25,7 @@ export default function App() {
     <div>
       <Header />
       <Welcome/>
+      <GenderShow/>
       {/* <Switch>
         <Route exact path="/" component={HomePage} />
         <Route component={NotFoundPage} />

@@ -5,7 +5,7 @@
 */
 /*eslint-disable*/
 import React from 'react';
-import icon from '../../images/icon-96x96.png';
+import icon from '../../images/icon_female.png';
 import styled from 'styled-components';
 import HOC from '../Hoc';
 import Img from '../Img';
@@ -13,19 +13,23 @@ import Img from '../Img';
 function GenderShow() {
 
   const ImageWapper = styled.div`
-    margin-bottom: 10px;
+    margin-bottom: 5px;   
+  `;
+  
+  const GenderContainer = styled.div`
+    margin-top: 50px;
   `;
 
 
   return (
-    <div>
-      <ImageWapper>
+    <GenderContainer>
+      <ImageWapper className="bt">
         <Img src={icon} />
       </ImageWapper>
-      <ImageWapper>
+      <ImageWapper className="bt">
         <Img src={icon} />
       </ImageWapper>
-    </div>
+    </GenderContainer>
   );
 
 }

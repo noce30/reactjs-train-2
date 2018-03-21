@@ -8,6 +8,6 @@ import { defineMessages } from 'react-intl';
 export default defineMessages({
   header: {
     id: 'app.containers.Welcome.header',
-    defaultMessage: 'This is Welcome container !',
+    defaultMessage: 'To assist you in getting your financial freedom and right protection',
   },
 });

@@ -10,22 +10,24 @@
  * reloading is not a necessity for you then you can refactor it and remove
  * the linting exception.
  */
-/*eslint-disable*/
+
+import React from 'react';/*eslint-disable */
 import { Switch, Route } from 'react-router-dom';
+
 import HomePage from 'containers/HomePage/Loadable';
 import NotFoundPage from 'containers/NotFoundPage/Loadable';
 import Header from 'components/Header';
-import GenderShow from 'components/GenderShow';
-import React  from 'react'; 
+import Welcome from 'containers/Welcome/index';
 
 export default function App() {
   return (
     <div>
-      <GenderShow />     
-      <Switch>
+      <Header />
+      <Welcome/>
+      {/* <Switch>
         <Route exact path="/" component={HomePage} />
         <Route component={NotFoundPage} />
-      </Switch>
+      </Switch> */}
     </div>
   );
 }

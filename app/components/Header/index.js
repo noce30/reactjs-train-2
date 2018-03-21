@@ -30,7 +30,7 @@ class Header extends React.PureComponent {
 
   render() {
     return (
-      <div>
+      <div style={{height: "85px"}}>
 
         <NavBar>
           <Logo />

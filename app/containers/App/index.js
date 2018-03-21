@@ -12,21 +12,19 @@
  */
 
 import React from 'react';
-// import { Switch, Route } from 'react-router-dom';
+import { Switch, Route } from 'react-router-dom';
 
 // import HomePage from 'containers/HomePage/Loadable';
-// import NotFoundPage from 'containers/NotFoundPage/Loadable';
-import Welcome from '../Welcome/index';
+import NotFoundPage from 'containers/NotFoundPage/Loadable';
+import Header from 'components/Header';
 
 export default function App() {
   return (
     <div>
-      <Welcome />
-      {/* <Switch>
-        <Route exact path="/" component={HomePage} />
+      <Switch>
+        <Route exact path="/" component={Header} />
         <Route component={NotFoundPage} />
-        <Route path="/:welcome" component={Welcome} />
-      </Switch> */}
+      </Switch>
     </div>
   );
 }

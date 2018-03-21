@@ -1,0 +1,12 @@
+.dd-wrapper{
+    top: 35%;
+    right: 0;
+    margin-right: 16px;
+    display: block;
+    position: absolute; 
+
+    &.open span:nth-child(1){
+        top: 18px;
+        transform: rotate(135deg);
+    }
+}

@@ -21,10 +21,10 @@ import WelcomeBody from './welcome-body';
 import thai from '../../images/thai.jpg';
 
 const Container = styled.div`
-height:100%;
+min-height:1000px;
 width:100%;
 background-image:url(${thai});
-position:fixed;
+position:absolute;
 background-repeat:no-repeat;
 background-size: cover;
 background-position: center center;
@@ -36,7 +36,7 @@ height:100%;
 width:100%;
 background-color:rgba(34, 41, 89,0.9);
 color: #FDFDFD;
-position:fixed;
+position:absolute;
 `;
 
 export class Welcome extends React.Component { // eslint-disable-line react/prefer-stateless-function

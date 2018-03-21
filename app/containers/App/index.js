@@ -11,21 +11,23 @@
  * the linting exception.
  */
 
-import React from 'react';
+import React from 'react';/*eslint-disable */
 import { Switch, Route } from 'react-router-dom';
 
 import HomePage from 'containers/HomePage/Loadable';
 import NotFoundPage from 'containers/NotFoundPage/Loadable';
 import Header from 'components/Header';
+import Welcome from 'containers/Welcome/index';
 
 export default function App() {
   return (
     <div>
       <Header />
-      <Switch>
+      <Welcome/>
+      {/* <Switch>
         <Route exact path="/" component={HomePage} />
         <Route component={NotFoundPage} />
-      </Switch>
+      </Switch> */}
     </div>
   );
 }

@@ -15,12 +15,13 @@ import { Switch, Route } from 'react-router-dom';
 import HomePage from 'containers/HomePage/Loadable';
 import NotFoundPage from 'containers/NotFoundPage/Loadable';
 import Header from 'components/Header';
+import GenderShow from 'components/GenderShow';
 import React  from 'react'; 
 
 export default function App() {
   return (
     <div>
-      <Header />     
+      <GenderShow />     
       <Switch>
         <Route exact path="/" component={HomePage} />
         <Route component={NotFoundPage} />

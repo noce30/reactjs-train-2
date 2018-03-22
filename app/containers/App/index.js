@@ -19,13 +19,13 @@ import NotFoundPage from 'containers/NotFoundPage/Loadable';
 import Header from 'components/Header';
 import GenderShow from 'components/GenderShow';
 import Welcome from 'containers/Welcome/index';
+import Home from 'containers/Home';
 
 export default function App() {
   return (
     <div>
       <Header />
-      <Welcome/>
-      <GenderShow/>
+      <Home/>    
       {/* <Switch>
         <Route exact path="/" component={HomePage} />
         <Route component={NotFoundPage} />

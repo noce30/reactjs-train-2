@@ -25,9 +25,10 @@
   border-radius: 35px;
   background: linear-gradient(180deg, #CD5677, transparent);
   transition: height 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  transform: rotatex(180deg) translate3d(0, -330px, 0);
+  transform: rotatex(180deg) translate3d(0, -300px, 0);
   /* the Y-Value shall be higher than the height on hover*/
   transform-origin: top;
+  margin: 20px;
 }
 
 .hoc-container:hover {
@@ -36,13 +37,5 @@
 
 .hoc-container:hover .bt {
   visibility: visible;
-}
-
-.menu-text {
-  font-weight: bold;
-  color: white;
-  transform: rotatex(0deg);
-  position: absolute;
-  bottom: 50%;
 }
 /*# sourceMappingURL=style.css.map */

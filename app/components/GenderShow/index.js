@@ -31,7 +31,6 @@ function GenderShow() {
       </ImageWapper>
     </GenderContainer>
   );
-
 }
 
 

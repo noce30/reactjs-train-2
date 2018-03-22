@@ -12,7 +12,7 @@ import { FormattedMessage } from 'react-intl';
 import { createStructuredSelector } from 'reselect';
 import { compose } from 'redux';
 import BackgroundHoc from '../../components/BackgroundHoc';
-
+import thai from '../../images/thai.jpg';
 import injectReducer from 'utils/injectReducer';
 import makeSelectHome from './selectors';
 import reducer from './reducer';
@@ -51,6 +51,13 @@ const withConnect = connect(mapStateToProps, mapDispatchToProps);
 
 const withReducer = injectReducer({ key: 'home', reducer });
 
-export default BackgroundHoc(compose(withReducer,  withConnect)(Home),"255,255,255", "../images/thai.jpg");
+export default BackgroundHoc(compose(withReducer,  withConnect)(Home),{
+  imgUrl: thai,
+  backgroundColor: "255,255,255",
+  isShowNextPage: true,
+  pre:"",
+  next:"/youneeds",  
+  title: 'Sony Trinh'
+});
 
 

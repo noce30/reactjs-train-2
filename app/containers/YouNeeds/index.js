@@ -32,8 +32,7 @@ padding:40px;
 export class YouNeeds extends React.Component { // eslint-disable-line react/prefer-stateless-function
   render() {
     return (
-      <Container>
-        <h1>You Needs</h1>
+      <Container>       
         <YourConcernItem />
         <YourNeedsItem />
         <YourBudgetItem />
@@ -64,6 +63,7 @@ export default BackgroundHoc(compose(withReducer, withConnect)(YouNeeds), {
   imgUrl: thai,
   backgroundColor: "242, 242, 242",
   isShowNextPage: true,
-  pre: "/",
-  next: "/gender"
+  pre: "/home",
+  next: "/gender",
+  title: 'You Needs'
 });

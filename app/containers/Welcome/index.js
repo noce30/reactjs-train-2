@@ -57,4 +57,10 @@ const withConnect = connect(mapStateToProps, mapDispatchToProps);
 
 const withReducer = injectReducer({ key: 'welcome', reducer });
 
-export default BackgroundHoc(compose(withReducer, withConnect)(Welcome), "34, 41, 89", thai);
+export default BackgroundHoc(compose(withReducer, withConnect)(Welcome),{
+  imgUrl: thai,
+  backgroundColor: "34, 41, 89",
+  isShowNextPage: false,
+  pre:"",
+  next:""
+});

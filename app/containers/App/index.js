@@ -17,6 +17,7 @@ import { Switch, Route } from 'react-router-dom';
 import HomePage from 'containers/HomePage/Loadable';
 import NotFoundPage from 'containers/NotFoundPage/Loadable';
 import Header from 'components/Header';
+import GenderShow from 'components/GenderShow';
 import Welcome from 'containers/Welcome/index';
 import YouNeeds from 'containers/YouNeeds/Loadable';
 
@@ -24,8 +25,10 @@ export default function App() {
   return (
     <div>
       <Header />
-      <YouNeeds />
+      {/* <YouNeeds /> */}
       {/* <Welcome/> */}
+      <Welcome/>
+      <GenderShow/>
       {/* <Switch>
         <Route exact path="/" component={HomePage} />
         <Route component={NotFoundPage} />

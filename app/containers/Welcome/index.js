@@ -21,7 +21,7 @@ import WelcomeBody from './welcome-body';
 import thai from '../../images/thai.jpg';
 
 const Container = styled.div`
-min-height:1000px;
+min-height:1300px;
 width:100%;
 background-image:url(${thai});
 position:absolute;

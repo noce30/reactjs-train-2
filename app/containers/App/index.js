@@ -19,17 +19,18 @@ import NotFoundPage from 'containers/NotFoundPage/Loadable';
 import Header from 'components/Header';
 import GenderShow from 'components/GenderShow';
 import Welcome from 'containers/Welcome/index';
-import Home from 'containers/Home';
+import YouNeeds from 'containers/YouNeeds/Loadable';
 
 export default function App() {
   return (
     <div>
       <Header />
-      <Home/>    
-      {/* <Switch>
-        <Route exact path="/" component={HomePage} />
+      <Switch>
+        <Route exact path="/" component={Welcome} />
+        <Route path="/gender" component={GenderShow} />
+        <Route path="/youneeds" component={YouNeeds} />
         <Route component={NotFoundPage} />
-      </Switch> */}
+      </Switch>
     </div>
   );
 }

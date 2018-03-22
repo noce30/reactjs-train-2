@@ -30,6 +30,10 @@ margin-left:15px;
 `
 
 export default class WelcomeBody extends Component {
+
+    handleNextPage() {
+        window.location = '/gender';
+    }
     render() {
         return (
             <div>
@@ -37,7 +41,7 @@ export default class WelcomeBody extends Component {
                     <h2>Welcome</h2>
                     <Input type="text" placeholder="your name here" />
                     <Slide>
-                        <img src={icon_female} />
+                        <img src={icon_female} onClick={this.handleNextPage.bind(this)} />
                         <TextUpcase>let's start your asessment</TextUpcase>
                     </Slide>
                 </Container>

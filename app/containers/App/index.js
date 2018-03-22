@@ -25,14 +25,12 @@ export default function App() {
   return (
     <div>
       <Header />
-      {/* <YouNeeds /> */}
-      {/* <Welcome/> */}
-      <Welcome/>
-      <GenderShow/>
-      {/* <Switch>
-        <Route exact path="/" component={HomePage} />
+      <Switch>
+        <Route exact path="/" component={Welcome} />
+        <Route path="/gender" component={GenderShow} />
+        <Route path="/youneeds" component={YouNeeds} />
         <Route component={NotFoundPage} />
-      </Switch> */}
+      </Switch>
     </div>
   );
 }

@@ -24,7 +24,7 @@
   height: 70px;
   border-radius: 35px;
   background: linear-gradient(180deg, #CD5677, transparent);
-  transition: height 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: height 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   transform: rotatex(180deg) translate3d(0, -300px, 0);
   /* the Y-Value shall be higher than the height on hover*/
   transform-origin: top;
@@ -32,7 +32,7 @@
 }
 
 .hoc-container:hover {
-  height: 300px;
+  height: 320px;
 }
 
 .hoc-container:hover .bt {

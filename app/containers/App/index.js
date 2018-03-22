@@ -20,6 +20,7 @@ import Header from 'components/Header';
 import GenderShow from 'components/GenderShow';
 import Welcome from 'containers/Welcome/index';
 import YouNeeds from 'containers/YouNeeds/Loadable';
+import Home from 'containers/Home';
 
 export default function App() {
   return (
@@ -27,7 +28,7 @@ export default function App() {
       <Header />
       <Switch>
         <Route exact path="/" component={Welcome} />
-        <Route path="/gender" component={GenderShow} />
+        <Route path="/home" component={Home} />
         <Route path="/youneeds" component={YouNeeds} />
         <Route component={NotFoundPage} />
       </Switch>

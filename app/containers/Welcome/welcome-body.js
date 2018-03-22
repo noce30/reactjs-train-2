@@ -32,7 +32,7 @@ margin-left:15px;
 export default class WelcomeBody extends Component {
 
     handleNextPage() {
-        window.location = '/gender';
+        window.location = '/home';
     }
     render() {
         return (

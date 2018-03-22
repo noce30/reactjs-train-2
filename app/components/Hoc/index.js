@@ -14,13 +14,14 @@ import Img from '../Img';
 const MenuText = styled.div`
     font-weight: bold;
     color: #29317A;
-    transform: rotatex(0deg);
-    position: absolute;
+    position: fixed;
     margin: 0 25px;
-    bottom: 50%;
+    bottom: 3%;
+    width: 70px;
+    text-align: center;
 `;
 
-const Hoc = (ComposedComponent, link, name) => class extends Component { // eslint-disable-line react/prefer-stateless-function
+const Hoc = (ComposedComponent, icon, name) => class extends Component { // eslint-disable-line react/prefer-stateless-function
   render() {
 
     return (

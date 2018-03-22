@@ -27,10 +27,18 @@ const BackgroundHoc = (ComposedComponent, backgroundColor, imageUrl) => class Ba
       background-color: rgba(${backgroundColor},0.7);       
       position:fixed;
     `;
+    const TitleText = styled.h1`
+      text-transform: capitalize;
+      text-align: center;
+      margin-top: 100px;
+      font-weight: bold;
+      color: #29317A;
+    `;
 
     return (
       <MainContainer>
         <ImageBackground>
+          <TitleText>Welcome</TitleText>
           <ComposedComponent />
         </ImageBackground>
       </MainContainer>

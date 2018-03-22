@@ -18,14 +18,14 @@ const BackgroundHoc = (ComposedComponent, backgroundColor, imageUrl) => class Ba
       background-repeat: no-repeat; 
       background-size: cover;
       background-position: center center;
-      position: fixed;
+      position: absolute;
     
   `;
     const ImageBackground = styled.div`    
       height:100%;
       width:100%;
       background-color: rgba(${backgroundColor},0.7);       
-      position:fixed;
+      position:absolute;
     `;
 
     return (

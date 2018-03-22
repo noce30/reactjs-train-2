@@ -7,7 +7,7 @@ const Content = styled.div`
     z-index: 1000;
     margin: 0;
     padding: 0;
-    position: fixed;
+    position: absolute;
     text-align:center;
     width: 300px; 
 `;

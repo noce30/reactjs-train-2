@@ -19,6 +19,7 @@ import styled from 'styled-components';
 import YourConcernItem from './YourConcernItem';
 import YourBudgetItem from './YourBudgetItem';
 import YourNeedsItem from './YourNeedsItem';
+import BackgroundHoc from '../../components/BackgroundHoc';
 
 const Container = styled.div`
 width: 100%;
@@ -58,7 +59,4 @@ const withConnect = connect(mapStateToProps, mapDispatchToProps);
 
 const withReducer = injectReducer({ key: 'youNeeds', reducer });
 
-export default compose(
-  withReducer,
-  withConnect,
-)(YouNeeds);
+export default BackgroundHoc(compose(withReducer, withConnect)(YouNeeds), "242, 242, 242", "../images/thai.jpg");

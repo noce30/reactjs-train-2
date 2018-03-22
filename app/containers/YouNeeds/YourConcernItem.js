@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import icon_question from '../../images/icon_question.png';
 
 const Content = styled.div`
-    z-index: 1000;
+    z-index: 10;
     margin: 0;
     padding: 0;
     position: absolute;

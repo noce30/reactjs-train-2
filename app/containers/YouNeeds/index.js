@@ -19,6 +19,8 @@ import styled from 'styled-components';
 import YourConcernItem from './YourConcernItem';
 import YourBudgetItem from './YourBudgetItem';
 import YourNeedsItem from './YourNeedsItem';
+import BackgroundHoc from '../../components/BackgroundHoc';
+import thai from '../../images/thai.jpg';
 
 const Container = styled.div`
 width: 100%;
@@ -58,7 +60,10 @@ const withConnect = connect(mapStateToProps, mapDispatchToProps);
 
 const withReducer = injectReducer({ key: 'youNeeds', reducer });
 
-export default compose(
-  withReducer,
-  withConnect,
-)(YouNeeds);
+export default BackgroundHoc(compose(withReducer, withConnect)(YouNeeds), {
+  imgUrl: thai,
+  backgroundColor: "242, 242, 242",
+  isShowNextPage: true,
+  pre: "/",
+  next: "/gender"
+});

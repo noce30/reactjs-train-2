@@ -4,10 +4,10 @@ import styled from 'styled-components';
 import icon_dollart from '../../images/icon_dollart.png';
 
 const Content = styled.div`
-    z-index: 1000;
+    z-index: 10;
     margin: 0;
     padding: 0;
-    position: fixed;
+    position: absolute;
     text-align:center;
     width: 300px; 
 `;

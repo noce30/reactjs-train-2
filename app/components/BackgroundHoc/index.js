@@ -7,38 +7,51 @@
 import React from 'react';
 import styled from 'styled-components';
 import thai from '../../images/thai.jpg';
+import right from '../../images/right.png';
+import back from '../../images/back.png';
 
-const BackgroundHoc = (ComposedComponent, backgroundColor, imageUrl) => class BackgroundHoc extends React.Component { // eslint-disable-line react/prefer-stateless-function
+const BackgroundHoc = (ComposedComponent, props) => class BackgroundHoc extends React.Component { // eslint-disable-line react/prefer-stateless-function
   render() {
-
     const MainContainer = styled.div`
       min-height:1300px;
       width:100%;
-      background-image: url(${thai});
+      background-image: url(${props.imgUrl});
       background-repeat: no-repeat; 
       background-size: cover;
       background-position: center center;
-      position: fixed;
+      position: absolute;
     
   `;
     const ImageBackground = styled.div`    
       height:100%;
       width:100%;
-      background-color: rgba(${backgroundColor},0.7);       
-      position:fixed;
+      background-color: rgba(${props.backgroundColor},0.7);       
+      position:absolute;
     `;
-    const TitleText = styled.h1`
-      text-transform: capitalize;
-      text-align: center;
-      margin-top: 100px;
-      font-weight: bold;
-      color: #29317A;
+
+    const NextPre = styled.div`
+    position:fixed;
+    top:50%;
+    width:100%;
+    `;
+
+    const Next = styled.a`
+    float:right;
+    `;
+
+    const Pre = styled.a`
+    
     `;
 
     return (
       <MainContainer>
         <ImageBackground>
-          <TitleText>Welcome</TitleText>
+          {props.isShowNextPage &&
+            <NextPre>
+              <Pre href={props.pre}><img src={back} /></Pre>
+              <Next href={props.next}><img src={right} /></Next>
+            </NextPre>
+          }
           <ComposedComponent />
         </ImageBackground>
       </MainContainer>

@@ -3,6 +3,7 @@
  * Welcome
  *
  */
+/*eslint-disable */
 
 import React from 'react';
 import styled from 'styled-components';
@@ -11,6 +12,7 @@ import { connect } from 'react-redux';
 import { FormattedMessage } from 'react-intl';
 import { createStructuredSelector } from 'reselect';
 import { compose } from 'redux';
+import BackgroundHoc from '../../components/BackgroundHoc';
 
 import injectReducer from 'utils/injectReducer';
 import makeSelectWelcome from './selectors';
@@ -21,33 +23,17 @@ import WelcomeBody from './welcome-body';
 import thai from '../../images/thai.jpg';
 
 const Container = styled.div`
-min-height:1300px;
-width:100%;
-background-image:url(${thai});
-position:absolute;
-background-repeat:no-repeat;
-background-size: cover;
-background-position: center center;
-`;
-
-const ContainerImage = styled.div`
 padding: 2%;
-height:100%;
-width:100%;
-background-color:rgba(34, 41, 89,0.9);
 color: #FDFDFD;
-position:absolute;
 `;
 
 export class Welcome extends React.Component { // eslint-disable-line react/prefer-stateless-function
   render() {
     return (
       <Container>
-        <ContainerImage>
-          <WelcomeHeader />
-          <FormattedMessage {...messages.header} />
-          <WelcomeBody></WelcomeBody>
-        </ContainerImage>
+        <WelcomeHeader />
+        <FormattedMessage {...messages.header} />
+        <WelcomeBody></WelcomeBody>
       </Container>
     );
   }
@@ -71,7 +57,10 @@ const withConnect = connect(mapStateToProps, mapDispatchToProps);
 
 const withReducer = injectReducer({ key: 'welcome', reducer });
 
-export default compose(
-  withReducer,
-  withConnect,
-)(Welcome);
+export default BackgroundHoc(compose(withReducer, withConnect)(Welcome),{
+  imgUrl: thai,
+  backgroundColor: "34, 41, 89",
+  isShowNextPage: false,
+  pre:"",
+  next:""
+});

@@ -18,12 +18,14 @@ import HomePage from 'containers/HomePage/Loadable';
 import NotFoundPage from 'containers/NotFoundPage/Loadable';
 import Header from 'components/Header';
 import Welcome from 'containers/Welcome/index';
+import YouNeeds from 'containers/YouNeeds/Loadable';
 
 export default function App() {
   return (
     <div>
       <Header />
-      <Welcome/>
+      <YouNeeds />
+      {/* <Welcome/> */}
       {/* <Switch>
         <Route exact path="/" component={HomePage} />
         <Route component={NotFoundPage} />
